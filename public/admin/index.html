@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kelola Produk — CMS Gala Sukses Samudera</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="/assets/logo-gss-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/admin/css/admin.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- ============ Sidebar ============ -->
+  <aside class="sidebar">
+    <a class="sidebar__brand" href="/" title="Lihat halaman utama">
+      <!-- Cakram putih: logo memuat garis hitam yang hilang di atas latar navy -->
+      <span class="logo-chip"><img src="/assets/logo-gss.png" alt="" width="44" height="44"></span>
+      <span>
+        <b>Gala Sukses Samudera</b>
+        <span>CMS Admin</span>
+      </span>
+    </a>
+
+    <nav class="sidebar__nav">
+      <button class="sidebar__link is-active" data-view="content">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 9v11"/></svg>
+        Konten Halaman
+      </button>
+      <button class="sidebar__link" data-view="products">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7 12 3 4 7v10l8 4 8-4z"/><path d="m4 7 8 4 8-4M12 21V11"/></svg>
+        Produk
+      </button>
+      <button class="sidebar__link" data-view="messages">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m2.5 7 8.4 5.6a2 2 0 0 0 2.2 0L21.5 7"/></svg>
+        Pesan Masuk
+        <span class="sidebar__badge hidden" id="msgBadge">0</span>
+      </button>
+    </nav>
+
+    <div class="sidebar__foot">
+      <div class="sidebar__user">
+        <b id="userName">—</b>
+        <span id="userHandle"></span>
+      </div>
+      <a class="sidebar__link" href="/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6M10 14 21 3"/></svg>
+        Lihat Situs
+      </a>
+      <button class="sidebar__link" id="logoutBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5M21 12H9"/></svg>
+        Keluar
+      </button>
+    </div>
+  </aside>
+
+  <!-- ============ Konten ============ -->
+  <main class="main">
+
+    <!-- ---- View: Konten Halaman ---- -->
+    <section id="viewContent">
+      <div class="page-head">
+        <div>
+          <h1>Konten Halaman</h1>
+          <p>Ubah teks dan foto di setiap bagian halaman utama. Tersedia dua bahasa.</p>
+        </div>
+        <button class="btn btn--gold" id="contentSave" disabled>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><path d="M17 21v-8H7v8M7 3v5h8"/></svg>
+          Simpan Perubahan
+        </button>
+      </div>
+
+      <div class="section-tabs" id="contentTabs" role="tablist"></div>
+      <div id="contentPanels"></div>
+      <div id="contentState"></div>
+    </section>
+
+    <!-- ---- View: Produk ---- -->
+    <section id="viewProducts" class="hidden">
+      <div class="page-head">
+        <div>
+          <h1>Kelola Produk</h1>
+          <p>Perubahan di sini langsung tampil pada section Produk di halaman utama.</p>
+        </div>
+        <button class="btn btn--gold" id="addBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          Tambah Produk
+        </button>
+      </div>
+
+      <div class="toolbar">
+        <input class="input" type="search" id="searchInput" placeholder="Cari nama atau kategori produk…" aria-label="Cari produk">
+        <select class="select" id="statusFilter" aria-label="Saring berdasarkan status">
+          <option value="">Semua status</option>
+          <option value="active">Aktif (tampil di situs)</option>
+          <option value="draft">Draft (disembunyikan)</option>
+        </select>
+      </div>
+
+      <div class="card">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th style="width:96px">Foto</th>
+                <th>Nama Produk</th>
+                <th style="width:150px">Kategori</th>
+                <th style="width:130px">Status</th>
+                <th style="width:160px"><span class="sr-only">Aksi</span></th>
+              </tr>
+            </thead>
+            <tbody id="productBody"></tbody>
+          </table>
+        </div>
+        <div id="productState"></div>
+      </div>
+    </section>
+
+    <!-- ---- View: Pesan ---- -->
+    <section id="viewMessages" class="hidden">
+      <div class="page-head">
+        <div>
+          <h1>Pesan Masuk</h1>
+          <p>Pesan yang dikirim lewat formulir kontak di halaman utama.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="messages" id="messageList"></div>
+        <div id="messageState"></div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- ============ Modal: Tambah / Edit Produk ============ -->
+<div class="modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal__panel">
+    <form id="productForm" novalidate>
+      <div class="modal__head">
+        <div>
+          <h2 id="modalTitle">Tambah Produk</h2>
+          <p id="modalSubtitle">Lengkapi data produk di bawah ini.</p>
+        </div>
+        <button type="button" class="icon-btn" id="modalClose" aria-label="Tutup">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <div class="modal__body">
+        <p class="form-error" id="formError" role="alert"></p>
+
+        <div class="field">
+          <span>Foto Produk</span>
+          <div class="gallery" id="gallery">
+            <div class="gallery__grid" id="galleryGrid"></div>
+            <div class="gallery__drop" id="galleryDrop">
+              <button type="button" class="btn btn--ghost" id="pickBtn">+ Tambah Foto</button>
+              <p class="uploader__hint">
+                Seret &amp; lepas beberapa file ke sini, atau klik tombol di atas.<br>
+                JPG, PNG, WEBP, atau AVIF — maksimal 6&nbsp;MB per foto, hingga 12 foto.
+                Rasio ideal 4:3. <strong>Foto pertama menjadi sampul kartu.</strong>
+              </p>
+              <input type="file" id="imageInput" multiple accept="image/jpeg,image/png,image/webp,image/avif">
+            </div>
+          </div>
+        </div>
+
+        <label class="field">
+          <span>Nama Produk <em aria-hidden="true">*</em></span>
+          <input class="input" type="text" name="name" id="nameInput" required maxlength="120" placeholder="Contoh: Baby Octopus">
+        </label>
+
+        <div class="bi-grid">
+          <label class="field">
+            <span>Kategori (Indonesia) <em aria-hidden="true">*</em></span>
+            <input class="input" type="text" name="category" id="categoryInput" required maxlength="60"
+                   list="categoryOptions" placeholder="Contoh: Cephalopoda">
+            <datalist id="categoryOptions"></datalist>
+          </label>
+          <label class="field">
+            <span>Kategori (English)</span>
+            <input class="input" type="text" name="categoryEn" id="categoryEnInput" maxlength="60"
+                   placeholder="Contoh: Cephalopod">
+          </label>
+        </div>
+
+        <div class="bi-grid">
+          <label class="field">
+            <span>Deskripsi (Indonesia)</span>
+            <textarea class="textarea" name="description" id="descInput" maxlength="600"
+                      placeholder="Bentuk penyajian, ukuran, atau keunggulan produk…"></textarea>
+          </label>
+          <label class="field">
+            <span>Deskripsi (English)</span>
+            <textarea class="textarea" name="descriptionEn" id="descEnInput" maxlength="600"
+                      placeholder="Presentation, size, or product advantages…"></textarea>
+          </label>
+        </div>
+        <p class="field-note">Kolom English boleh dikosongkan — situs akan memakai teks Indonesia sebagai cadangan.</p>
+
+        <label class="field" style="margin-bottom:0">
+          <span>Status</span>
+          <select class="select" name="status" id="statusInput">
+            <option value="active">Aktif — tampil di halaman utama</option>
+            <option value="draft">Draft — disembunyikan dari pengunjung</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="modal__foot">
+        <button type="button" class="btn btn--ghost" id="cancelBtn">Batal</button>
+        <button type="submit" class="btn btn--primary" id="saveBtn">Simpan Produk</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- ============ Modal: Konfirmasi Hapus ============ -->
+<div class="modal" id="deleteModal" role="dialog" aria-modal="true" aria-labelledby="deleteTitle">
+  <div class="modal__panel modal__panel--sm">
+    <div class="modal__head">
+      <div>
+        <h2 id="deleteTitle">Hapus Produk?</h2>
+        <p id="deleteText">Tindakan ini tidak dapat dibatalkan.</p>
+      </div>
+    </div>
+    <div class="modal__foot">
+      <button type="button" class="btn btn--ghost" id="deleteCancel">Batal</button>
+      <button type="button" class="btn btn--danger" id="deleteConfirm">Ya, Hapus</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast-wrap" id="toastWrap"></div>
+
+<script src="/admin/js/admin.js" defer></script>
+<script src="/admin/js/content.js" defer></script>
+</body>
+</html>

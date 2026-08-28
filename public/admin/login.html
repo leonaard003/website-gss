@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Login Admin — Gala Sukses Samudera</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="/assets/logo-gss-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/admin/css/admin.css">
+</head>
+<body>
+
+<main class="login">
+  <div class="login__card">
+    <div class="login__brand">
+      <img src="/assets/logo-gss.png" alt="" width="46" height="46">
+      <span>
+        <b>Gala Sukses Samudera</b>
+        <span>Content Management</span>
+      </span>
+    </div>
+
+    <h1>Masuk ke CMS</h1>
+    <p class="login__sub">Kelola katalog produk yang tampil di halaman utama.</p>
+
+    <form id="loginForm" novalidate>
+      <p class="form-error" id="loginError" role="alert"></p>
+
+      <label class="field">
+        <span>Username</span>
+        <input class="input" type="text" name="username" id="username"
+               autocomplete="username" required autofocus placeholder="admin">
+      </label>
+
+      <label class="field">
+        <span>Password</span>
+        <input class="input" type="password" name="password" id="password"
+               autocomplete="current-password" required placeholder="••••••••">
+      </label>
+
+      <button type="submit" class="btn btn--gold btn--block" id="loginBtn">Masuk</button>
+    </form>
+
+    <p class="login__hint">Sesi berlaku selama 8 jam.</p>
+    <a class="login__back" href="/">← Kembali ke halaman utama</a>
+  </div>
+</main>
+
+<script>
+(function () {
+  'use strict';
+  const form = document.getElementById('loginForm');
+  const errorBox = document.getElementById('loginError');
+  const btn = document.getElementById('loginBtn');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    errorBox.textContent = '';
+
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value;
+
+    if (!username || !password) {
+      errorBox.textContent = 'Username dan password wajib diisi.';
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Memproses…';
+
+    try {
+      const res = await fetch('/api/admin/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data.error || 'Gagal masuk.');
+
+      window.location.replace('/admin/');
+    } catch (err) {
+      errorBox.textContent = err.message;
+      btn.disabled = false;
+      btn.textContent = 'Masuk';
+      document.getElementById('password').value = '';
+      document.getElementById('password').focus();
+    }
+  });
+})();
+</script>
+</body>
+</html>

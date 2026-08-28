@@ -1,0 +1,16 @@
+node_modules/
+
+# Kunci penanda-tangan cookie — dibuat otomatis, jangan pernah masuk repo
+data/.secret
+
+# Kredensial admin (hash bcrypt) bersifat per-instalasi
+data/users.json
+
+# Pesan dari formulir kontak berisi data pribadi pengunjung
+data/messages.json
+
+# File sementara dari penulisan atomik
+data/*.tmp
+
+.DS_Store
+Thumbs.db

@@ -1,0 +1,133 @@
+[
+  {
+    "id": "3a83a73b-4948-4a7f-9ea9-fafd0efe98db",
+    "name": "Baby Octopus",
+    "slug": "baby-octopus",
+    "category": "Cephalopoda",
+    "categoryEn": "Cephalopod",
+    "description": "Gurita muda dengan tekstur kenyal dan lembut. Ukuran serta bentuk penyajian disesuaikan dengan spesifikasi pembeli.",
+    "descriptionEn": "Baby octopus with a tender, springy texture. Size and presentation are tailored to buyer specifications.",
+    "status": "active",
+    "order": 0,
+    "createdAt": "2026-07-31T04:22:22.890Z",
+    "updatedAt": "2026-08-19T07:04:30.730Z",
+    "images": [
+      "/assets/products/baby-octopus.jpg",
+      "/uploads/img-5597-jpg-1787123068299-a2dcb20e.jpg"
+    ]
+  },
+  {
+    "id": "86cda23c-cceb-4181-afb4-37b8588768fc",
+    "name": "Mahi-Mahi",
+    "slug": "mahi-mahi",
+    "category": "Ikan",
+    "categoryEn": "Fish",
+    "description": "Ikan lemadang dengan daging putih padat dan rasa yang bersih. Ukuran dan bentuk penyajian mengikuti spesifikasi pembeli.",
+    "descriptionEn": "Mahi-mahi with firm white flesh and a clean flavour. Size and presentation follow buyer specifications.",
+    "status": "active",
+    "order": 1,
+    "createdAt": "2026-07-31T04:22:22.890Z",
+    "updatedAt": "2026-07-31T04:22:22.890Z",
+    "images": [
+      "/assets/products/mahi-mahi.jpg"
+    ]
+  },
+  {
+    "id": "47cb0268-8f62-4354-957e-960f083d9dd0",
+    "name": "Crayfish",
+    "slug": "crayfish",
+    "category": "Krustasea",
+    "categoryEn": "Crustacean",
+    "description": "Lobster air tawar dengan daging manis dan tekstur padat. Disortir per ukuran sesuai permintaan pembeli.",
+    "descriptionEn": "Freshwater crayfish with sweet meat and a firm texture. Graded by size according to buyer requirements.",
+    "status": "active",
+    "order": 2,
+    "createdAt": "2026-07-31T04:22:22.890Z",
+    "updatedAt": "2026-08-19T07:03:47.008Z",
+    "images": [
+      "/assets/products/crayfish.jpg",
+      "/uploads/whatsapp-image-2026-08-18-at-13-46-05-1-1787123021297-785491a5.jpg"
+    ]
+  },
+  {
+    "id": "e28fe59e-8a00-4d1a-9948-86c4f71cedd8",
+    "name": "Top Shell",
+    "slug": "top-shell",
+    "category": "Siput Laut",
+    "categoryEn": "Sea Snail",
+    "description": "Siput laut bertekstur renyah, dibersihkan menyeluruh sebelum diproses. Spesifikasi mengikuti kebutuhan pasar tujuan.",
+    "descriptionEn": "Sea snail with a crisp texture, thoroughly cleaned before processing. Specifications follow destination-market requirements.",
+    "status": "active",
+    "order": 3,
+    "createdAt": "2026-07-31T04:22:22.890Z",
+    "updatedAt": "2026-08-19T07:03:56.937Z",
+    "images": [
+      "/assets/products/top-shell.jpg",
+      "/uploads/whatsapp-image-2026-08-18-at-13-46-05-7-1787123035204-0ea5eed8.jpg"
+    ]
+  },
+  {
+    "id": "dc95ec63-22ca-4a16-a724-bfdff15f4cc8",
+    "name": "Squid",
+    "slug": "squid",
+    "category": "Cephalopoda",
+    "categoryEn": "Cephalopod",
+    "description": "Cumi-cumi dengan daging putih bersih dan tekstur lembut. Bentuk penyajian disesuaikan dengan permintaan pembeli.",
+    "descriptionEn": "Squid with clean white flesh and a tender texture. Presentation is tailored to buyer requests.",
+    "status": "active",
+    "order": 4,
+    "createdAt": "2026-07-31T04:22:22.890Z",
+    "updatedAt": "2026-07-31T04:22:22.890Z",
+    "images": [
+      "/assets/products/squid.jpg"
+    ]
+  },
+  {
+    "id": "6eb0d4b9-ae7d-47e2-8c25-cb8bc715b464",
+    "name": "Cuttlefish",
+    "slug": "cuttlefish",
+    "category": "Cephalopoda",
+    "categoryEn": "Cephalopod",
+    "description": "Sotong dengan daging tebal dan putih bersih. Ukuran serta bentuk penyajian mengikuti spesifikasi pembeli.",
+    "descriptionEn": "Cuttlefish with thick, clean white flesh. Size and presentation follow buyer specifications.",
+    "status": "active",
+    "order": 5,
+    "createdAt": "2026-07-31T04:22:22.890Z",
+    "updatedAt": "2026-07-31T04:22:22.890Z",
+    "images": [
+      "/assets/products/cuttlefish.jpg"
+    ]
+  },
+  {
+    "id": "3710ed7e-c1fd-41aa-9acb-ab103f15789b",
+    "name": "Grease Snail",
+    "slug": "grease-snail",
+    "category": "Siput Laut",
+    "categoryEn": "Sea Snail",
+    "description": "Siput laut bercita rasa gurih dengan tekstur khas. Diproses dan disortir sesuai kebutuhan pasar tujuan.",
+    "descriptionEn": "Sea snail with a savoury flavour and distinctive texture. Processed and graded to destination-market requirements.",
+    "status": "active",
+    "order": 6,
+    "createdAt": "2026-07-31T04:22:22.890Z",
+    "updatedAt": "2026-07-31T04:22:22.890Z",
+    "images": [
+      "/assets/products/grease-snail.jpg"
+    ]
+  },
+  {
+    "id": "b9d3a391-09d5-420e-bc86-3df29f605f32",
+    "name": "Moon Snail",
+    "slug": "moon-snail",
+    "category": "Siput Laut",
+    "categoryEn": "Sea Snail",
+    "description": "Siput bulan dengan daging lembut, dibersihkan menyeluruh sebelum diproses. Spesifikasi mengikuti permintaan pembeli.",
+    "descriptionEn": "Moon snail with tender meat, thoroughly cleaned before processing. Specifications follow buyer requests.",
+    "status": "active",
+    "order": 7,
+    "createdAt": "2026-07-31T04:22:22.890Z",
+    "updatedAt": "2026-07-31T04:22:22.890Z",
+    "images": [
+      "/assets/products/moon-snail.jpg"
+    ]
+  }
+]

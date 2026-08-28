@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="Placeholder foto Produk GSS">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#123258"/><stop offset="1" stop-color="#04101F"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <path d="M0 330 q 50 -12 100 0 q 50 -12 100 0 q 50 -12 100 0 q 50 -12 100 0 q 50 -12 100 0 q 50 -12 100 0 q 50 -12 100 0 q 50 -12 100 0 q 50 -12 100 0" fill="none" stroke="#C9A227" stroke-width="2.4" opacity="0.16"/><path d="M0 384 q 50 -12 100 0 q 50 -12 100 0 q 50 -12 100 0 q 50 -12 100 0 q 50 -12 100 0 q 50 -12 100 0 q 50 -12 100 0 q 50 -12 100 0 q 50 -12 100 0" fill="none" stroke="#C9A227" stroke-width="2.4" opacity="0.13"/><path d="M0 438 q 50 -12 100 0 q 50 -12 100 0 q 50 -12 100 0 q 50 -12 100 0 q 50 -12 100 0 q 50 -12 100 0 q 50 -12 100 0 q 50 -12 100 0 q 50 -12 100 0" fill="none" stroke="#C9A227" stroke-width="2.4" opacity="0.1"/><path d="M0 492.00000000000006 q 50 -12 100 0 q 50 -12 100 0 q 50 -12 100 0 q 50 -12 100 0 q 50 -12 100 0 q 50 -12 100 0 q 50 -12 100 0 q 50 -12 100 0 q 50 -12 100 0" fill="none" stroke="#C9A227" stroke-width="2.4" opacity="0.07"/>
+  <g transform="translate(300, 170) scale(2)" fill="none" stroke="#DCBB55" stroke-width="2.2"
+     stroke-linecap="round" stroke-linejoin="round" opacity="0.55" color="#DCBB55"><path d="M50 16c19 0 34 15 34 34 0 8-2 14-5 20H21c-3-6-5-12-5-20 0-19 15-34 34-34z"/><path d="M50 16v54M50 16c-8 8-14 26-14 54M50 16c8 8 14 26 14 54M50 16c-16 6-27 26-30 54M50 16c16 6 27 26 30 54"/></g>
+  <text x="400" y="504" text-anchor="middle" font-family="Sora, Segoe UI, sans-serif"
+        font-size="40" font-weight="700" letter-spacing="-1" fill="#FFFFFF">Produk GSS</text>
+  <text x="400" y="542" text-anchor="middle" font-family="Plus Jakarta Sans, Segoe UI, sans-serif"
+        font-size="17" letter-spacing="3" fill="#C9A227" opacity="0.85">FOTO PLACEHOLDER — UNGGAH VIA CMS</text>
+</svg>

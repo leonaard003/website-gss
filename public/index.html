@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gala Sukses Samudera — Seafood Processing &amp; Distribution, Medan</title>
+<meta name="description" content="Gala Sukses Samudera (GSS) — a seafood processing and distribution company in Medan, Indonesia. Founded in 2020, capacity 15–20 tons. Baby octopus, mahi-mahi, squid, cuttlefish and sea snails for domestic and international markets.">
+<meta name="theme-color" content="#002F60">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gala Sukses Samudera — Seafood Processing &amp; Export">
+<meta property="og:description" content="Indonesian seafood, processed to international standards. Medan, North Sumatra.">
+<meta property="og:image" content="/assets/hero-ocean.jpg">
+
+<link rel="icon" type="image/png" href="/assets/logo-gss-180.png">
+<link rel="apple-touch-icon" href="/assets/logo-gss-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+
+<!-- Jaring pengaman: animasi reveal memulai dari opacity 0. Bila JavaScript mati,
+     IntersectionObserver tidak pernah berjalan dan konten akan tak terlihat.
+     Teks bawaan di dalam HTML (bahasa Inggris) tetap terbaca tanpa JavaScript. -->
+<noscript>
+  <style>
+    .reveal { opacity: 1 !important; transform: none !important; }
+    .hero__sub, .hero__actions, .hero__stats { opacity: 1 !important; animation: none !important; }
+    .hero__title .line > span { transform: none !important; animation: none !important; }
+    .lang { display: none !important; }
+  </style>
+</noscript>
+</head>
+<body>
+
+<!-- ============================================================
+     1. NAVIGATION — latar putih agar logo GSS kontras
+     ============================================================ -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#home" class="brand" aria-label="Gala Sukses Samudera">
+      <img src="/assets/logo-gss.png" alt="" class="brand__mark" width="52" height="52">
+      <span class="brand__text">
+        <span class="brand__name">Gala Sukses Samudera</span>
+        <span class="brand__tag">Seafood Processing &amp; Export</span>
+      </span>
+    </a>
+
+    <nav>
+      <ul class="nav__menu" id="navMenu">
+        <li style="--i:0"><a class="nav__link" href="#home" data-i18n="nav.home">Home</a></li>
+        <li style="--i:1"><a class="nav__link" href="#tentang" data-i18n="nav.about">About Us</a></li>
+        <li style="--i:2"><a class="nav__link" href="#produk" data-i18n="nav.products">Products</a></li>
+        <li style="--i:3"><a class="nav__link" href="#quality" data-i18n="nav.quality">Quality Control</a></li>
+        <li style="--i:4"><a class="nav__link" href="#kontak" data-i18n="nav.contact">Contact</a></li>
+        <li class="nav__cta-wrap"><a class="btn btn--gold nav__cta" href="#kontak" data-i18n="nav.cta">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav__aside">
+      <div class="lang" role="group" aria-label="Language / Bahasa">
+        <button type="button" class="lang__btn" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" class="lang__btn" data-lang="id" aria-pressed="false">ID</button>
+      </div>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================================================
+     2. HERO
+     ============================================================ -->
+<section class="hero" id="home">
+  <div class="hero__media">
+    <img src="/assets/hero-ocean.jpg" alt="" data-c-src="hero.image" fetchpriority="high">
+  </div>
+
+  <div class="hero__inner">
+    <div class="hero__content">
+      <!-- Diisi ulang oleh main.js: tiap baris pada hero.title jadi satu .line,
+           baris terakhir otomatis berwarna emas. -->
+      <h1 class="hero__title" data-c-lines="hero.title">
+        <span class="line"><span>Indonesia's</span></span>
+        <span class="line"><span>Ocean Wealth,</span></span>
+        <span class="line"><span class="gold">World Class.</span></span>
+      </h1>
+      <p class="hero__sub" data-c="hero.subtitle">
+        A seafood processing and distribution company combining a strong global network
+        with modern infrastructure in Medan — ready to serve international markets.
+      </p>
+      <div class="hero__actions">
+        <a href="#produk" class="btn btn--gold">
+          <span data-i18n="hero.ctaPrimary">View Products</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#tentang" class="btn btn--ghost" data-i18n="hero.ctaSecondary">About Us</a>
+      </div>
+    </div>
+
+    <div class="hero__stats" data-c-list="hero.stats"></div>
+  </div>
+
+  <span class="hero__scroll" aria-hidden="true" data-i18n="hero.scroll">Scroll</span>
+</section>
+
+<!-- ============================================================
+     3. TENTANG KAMI
+     ============================================================ -->
+<section class="section" id="tentang">
+  <div class="container about__grid">
+    <div class="about__media reveal reveal--left">
+      <img src="/assets/about-factory.jpg" alt="" data-c-src="about.image" loading="lazy">
+      <div class="about__badge">
+        <b data-c="about.badgeTitle">Medan</b>
+        <span data-c="about.badgeSubtitle">North Sumatra, Indonesia</span>
+      </div>
+    </div>
+
+    <div class="about__body reveal reveal--right">
+      <h2 class="section-title" data-c-br="about.title">About Us</h2>
+
+      <p class="section-lead" data-c="about.lead">
+        After years of being trusted and operating under another company's name,
+        we are proud to introduce Gala Sukses Samudera.
+      </p>
+      <p style="margin-top:1.5rem" data-c="about.body1">
+        This independent journey marks our commitment to continuing the legacy of quality
+        and trust that our partners have come to know and value.
+      </p>
+      <p data-c="about.body2">
+        We have also officially commenced operations at our first processing facility in
+        Medan, Indonesia. By combining a strong global network with modern infrastructure,
+        we are ready to serve international markets with renewed passion, dedication,
+        and excellence in service.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     4. VISION & MISSION — foto besar di kiri, dua blok bertumpuk di kanan
+     ============================================================ -->
+<section class="section section--dark" id="visi-misi">
+  <div class="container">
+    <div class="vm__head reveal">
+      <h2 class="section-title" data-c-br="visionMission.title">Vision &amp; Mission</h2>
+    </div>
+
+    <div class="vm__layout">
+      <figure class="vm__media reveal reveal--left">
+        <img src="/assets/vision-mission.jpg" alt="" data-c-src="visionMission.image" loading="lazy">
+      </figure>
+
+      <div class="vm__stack">
+        <article class="vm__block reveal reveal--right" style="--i:0">
+          <span class="vm__label" data-c="visionMission.vision.label">Vision</span>
+          <h3 data-c="visionMission.vision.heading">
+            To be a trusted global seafood processing and distribution company.
+          </h3>
+          <p data-c="visionMission.vision.text">
+            Recognized for our commitment to the following four principles.
+          </p>
+          <ul class="vm__list" data-c-list="visionMission.vision.points"></ul>
+        </article>
+
+        <article class="vm__block reveal reveal--right" style="--i:1">
+          <span class="vm__label" data-c="visionMission.mission.label">Mission</span>
+          <h3 data-c="visionMission.mission.heading">
+            To provide premium seafood products that comply with international standards.
+          </h3>
+          <p data-c="visionMission.mission.text">
+            By consistently implementing rigorous quality control and food safety systems,
+            while strengthening our capabilities through continuous development of our
+            people and advanced technology.
+          </p>
+          <ul class="vm__list" data-c-list="visionMission.mission.points"></ul>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     5. CORE VALUES
+     ============================================================ -->
+<section class="section section--cream" id="nilai">
+  <div class="container">
+    <div class="reveal" style="max-width:60ch">
+      <h2 class="section-title" data-c-br="values.title">Core Value</h2>
+      <p class="section-lead" data-c="values.lead">
+        More than a statement of values — these are the advantages we bring to every partnership.
+      </p>
+    </div>
+
+    <div class="values__grid" data-c-list="values.items"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     6. HISTORY
+     ============================================================ -->
+<section class="section section--darker" id="sejarah">
+  <div class="container">
+    <div class="history__intro">
+      <div class="reveal reveal--left">
+        <h2 class="section-title" data-c-br="history.title">Since 2020,<br>Grown More Than<br>Fourfold</h2>
+      </div>
+
+      <div class="history__narrative reveal reveal--right">
+        <p class="section-lead" data-c="history.lead">
+          Founded in 2020, Gala Sukses Samudera began with a commitment to delivering
+          high-quality seafood and building trusted industry partnerships.
+        </p>
+        <p data-c="history.body1">
+          Starting with a processing capacity of 3–5 tons, we have grown to 15–20 tons
+          through consistent quality, operational excellence, and continuous improvement.
+        </p>
+        <p data-c="history.body2">
+          Today, we continue to strengthen our position as a reliable seafood processing
+          and distribution partner, serving both domestic and international markets.
+        </p>
+      </div>
+    </div>
+
+    <aside class="growth reveal">
+      <div class="growth__figures">
+        <div class="growth__figure growth__figure--from">
+          <b data-c="history.growthFrom">3–5</b><span data-c="history.growthFromLabel">Tons — initial capacity</span>
+        </div>
+
+        <div class="growth__track" aria-hidden="true">
+          <div class="growth__bar"><i></i></div>
+          <span class="growth__multiplier" data-c="history.growthMultiplier">more than fourfold</span>
+        </div>
+
+        <div class="growth__figure growth__figure--to">
+          <b data-c="history.growthTo">15–20</b><span data-c="history.growthToLabel">Tons — current capacity</span>
+        </div>
+      </div>
+
+      <div class="growth__caption">
+        <span class="growth__label" data-c="history.growthLabel">Processing Capacity Growth</span>
+        <p class="growth__note" data-c="history.growthNote">
+          Achieved through consistent quality, operational excellence, and continuous
+          improvement since the company was founded in 2020.
+        </p>
+      </div>
+    </aside>
+
+    <ol class="timeline" data-c-list="history.timeline"></ol>
+  </div>
+</section>
+
+<!-- ============================================================
+     7. PRODUK — data ditarik dari CMS via /api/products
+     ============================================================ -->
+<section class="section section--cream" id="produk">
+  <div class="container">
+    <div class="products__head">
+      <div class="reveal" style="max-width:52ch">
+        <h2 class="section-title" data-c-br="products.title">Our Product</h2>
+        <p class="section-lead" data-c="products.lead">
+          Eight key commodities, all processed at our facility in Medan. Size, presentation,
+          and packaging can be tailored to buyer specifications and destination-market
+          requirements.
+        </p>
+      </div>
+
+      <div class="slider__nav reveal">
+        <button class="slider__btn" id="prevBtn" data-i18n-aria="slider.prev" aria-label="Previous product" aria-controls="sliderTrack">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="slider__btn" id="nextBtn" data-i18n-aria="slider.next" aria-label="Next product" aria-controls="sliderTrack">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="slider">
+      <div class="slider__track" id="sliderTrack" role="region" aria-label="Product list" tabindex="0">
+        <noscript>
+          <p class="products__empty">
+            The product catalogue requires JavaScript. For the full list of commodities and
+            specifications, please contact us at
+            <a href="mailto:galasuksessamudera.gss@gmail.com" style="color:var(--gold-600);font-weight:600">galasuksessamudera.gss@gmail.com</a>.
+          </p>
+        </noscript>
+      </div>
+      <div class="slider__progress" aria-hidden="true"><i id="sliderProgress"></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     8. QUALITY CONTROL
+     ============================================================ -->
+<section class="section section--dark" id="quality">
+  <div class="container">
+    <div class="reveal" style="max-width:62ch">
+      <h2 class="section-title" data-c-br="quality.title">Quality Control</h2>
+      <p class="section-lead" data-c="quality.lead">
+        No product leaves our facility without passing through all five inspection stages,
+        in sequence.
+      </p>
+    </div>
+
+    <div class="qc__grid" data-c-list="quality.steps"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     9. KONTAK — tiga lapis: kepala, kanal langsung, lalu formulir + peta
+     ============================================================ -->
+<section class="section" id="kontak">
+  <div class="container">
+
+    <div class="contact__head reveal">
+      <h2 class="section-title" data-c-br="contact.title">Let's Discuss<br>Your Needs</h2>
+      <p class="section-lead" data-c="contact.lead">
+        For quotation requests, product specifications, or facility visits — our team is
+        ready to respond.
+      </p>
+    </div>
+
+    <!-- Kanal langsung: satu klik menuju percakapan -->
+    <div class="contact__channels">
+      <a class="channel reveal" style="--i:0" id="waLink" href="https://wa.me/6282163072591" target="_blank" rel="noopener">
+        <span class="channel__icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1s-.5-.1-.7.2-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6a2 2 0 0 0 .3-.5.5.5 0 0 0 0-.5L9.2 6.9c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4A3.4 3.4 0 0 0 6 9.4a5.9 5.9 0 0 0 1.2 3.1 13.4 13.4 0 0 0 5.2 4.6c.7.3 1.3.5 1.7.6a4.1 4.1 0 0 0 1.9.1 3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.2-.3-.3-.6-.5z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+        </span>
+        <span class="channel__label">WhatsApp</span>
+        <span class="channel__value" data-c="contact.whatsapp">+62 821 6307 2591</span>
+        <span class="channel__hint" data-i18n="contact.waHint">Tap to chat directly</span>
+        <span class="channel__arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+
+      <a class="channel reveal" style="--i:1" id="mailLink" href="mailto:galasuksessamudera.gss@gmail.com">
+        <span class="channel__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m2.5 7 8.4 5.6a2 2 0 0 0 2.2 0L21.5 7"/></svg>
+        </span>
+        <span class="channel__label" data-i18n="contact.email">Email</span>
+        <span class="channel__value" data-c="contact.email">galasuksessamudera.gss@gmail.com</span>
+        <span class="channel__arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+
+      <a class="channel reveal" style="--i:2" id="igLink" href="https://instagram.com/galasukessamudera" target="_blank" rel="noopener">
+        <span class="channel__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </span>
+        <span class="channel__label">Instagram</span>
+        <span class="channel__value" id="igHandle">@galasukessamudera</span>
+        <span class="channel__arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </span>
+      </a>
+
+      <a class="channel channel--address reveal" style="--i:3" id="mapLink" href="#" target="_blank" rel="noopener">
+        <span class="channel__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-5.4 8-12a8 8 0 1 0-16 0c0 6.6 8 12 8 12z"/><circle cx="12" cy="10" r="3"/></svg>
+        </span>
+        <span class="channel__label" data-i18n="contact.address">Address</span>
+        <span class="channel__value" data-c="contact.addressLine1">Jl. Titi Pahlawan No. 13B</span>
+        <span class="channel__hint" data-c-br="contact.addressLine2">Paya Pasir, Medan Marelan District<br>Medan, North Sumatra 20254<br>Indonesia</span>
+        <span class="channel__arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+        </span>
+      </a>
+    </div>
+
+    <!-- Formulir berdampingan dengan peta; alamat menempel di dasar peta -->
+    <div class="contact__bottom">
+      <form class="form reveal reveal--left" id="contactForm" novalidate>
+        <h3 data-c="contact.formTitle">Send a Message</h3>
+        <p data-c="contact.formSubtitle">Fill in the form below and our team will get back to you.</p>
+
+        <div class="form__grid">
+          <div class="form__row">
+            <label class="field">
+              <span><span data-i18n="form.name">Name</span> <em aria-hidden="true">*</em></span>
+              <input type="text" name="name" data-i18n-ph="form.namePh" placeholder="Your full name" required maxlength="120" autocomplete="name">
+            </label>
+            <label class="field">
+              <span><span data-i18n="form.email">Email</span> <em aria-hidden="true">*</em></span>
+              <input type="email" name="email" placeholder="name@company.com" required maxlength="160" autocomplete="email">
+            </label>
+          </div>
+
+          <label class="field">
+            <span data-i18n="form.phone">Phone / WhatsApp</span>
+            <input type="tel" name="phone" placeholder="+62 ..." maxlength="40" autocomplete="tel">
+          </label>
+
+          <label class="field">
+            <span><span data-i18n="form.message">Message</span> <em aria-hidden="true">*</em></span>
+            <textarea name="message" data-i18n-ph="form.messagePh" placeholder="Products of interest, estimated volume, destination country…" required maxlength="4000"></textarea>
+          </label>
+        </div>
+
+        <div class="form__actions">
+          <button type="submit" class="btn btn--gold" id="submitBtn">
+            <span data-i18n="form.submit">Send Message</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4z"/></svg>
+          </button>
+          <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+
+      <div class="contact__map reveal reveal--right">
+        <iframe id="mapFrame"
+          src="https://www.google.com/maps?q=Jl.+Titi+Pahlawan+No.13B,+Paya+Pasir,+Medan+Marelan,+Kota+Medan,+Sumatera+Utara+20254&z=16&output=embed"
+          title="Gala Sukses Samudera location"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     10. FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__about">
+        <a href="#home" class="brand brand--onDark">
+          <span class="brand__chip"><img src="/assets/logo-gss.png" alt="" width="46" height="46"></span>
+          <span class="brand__text">
+            <span class="brand__name">Gala Sukses Samudera</span>
+            <span class="brand__tag">Seafood Processing &amp; Export</span>
+          </span>
+        </a>
+        <p data-c="footer.about">
+          A seafood processing and distribution company in Medan, North Sumatra.
+          Founded in 2020, serving domestic and international markets with assured
+          product quality and food safety.
+        </p>
+      </div>
+
+      <div>
+        <h4 data-i18n="footer.nav">Navigation</h4>
+        <ul class="footer__links">
+          <li><a href="#home" data-i18n="nav.home">Home</a></li>
+          <li><a href="#tentang" data-i18n="nav.about">About Us</a></li>
+          <li><a href="#produk" data-i18n="nav.products">Products</a></li>
+          <li><a href="#quality" data-i18n="nav.quality">Quality Control</a></li>
+          <li><a href="#kontak" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 data-i18n="footer.contact">Contact</h4>
+        <ul class="footer__links">
+          <li><a id="waLinkFoot" href="https://wa.me/6282163072591" target="_blank" rel="noopener" data-c="contact.whatsapp">+62 821 6307 2591</a></li>
+          <li><a id="mailLinkFoot" href="mailto:galasuksessamudera.gss@gmail.com" data-c="contact.email">galasuksessamudera.gss@gmail.com</a></li>
+          <li><a id="igLinkFoot" href="https://instagram.com/galasukessamudera" target="_blank" rel="noopener">@galasukessamudera</a></li>
+          <li class="footer__address">
+            <span data-c="contact.addressLine1">Jl. Titi Pahlawan No. 13B</span><br>
+            <span data-c-br="contact.addressLine2">Paya Pasir, Medan Marelan District<br>Medan, North Sumatra 20254</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>&copy; <span id="year">2026</span> Gala Sukses Samudera. <span data-i18n="footer.rights">All rights reserved.</span></span>
+      <a href="/admin/">Admin</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Slideshow foto produk. Isinya dibangun main.js saat kartu diklik. -->
+<div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lbTitle" hidden>
+  <button type="button" class="lb__backdrop" id="lbBackdrop" tabindex="-1" aria-hidden="true"></button>
+
+  <div class="lb__panel">
+    <button type="button" class="lb__close" id="lbClose" data-i18n-aria="lb.close" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+
+    <div class="lb__stage">
+      <div class="lb__track" id="lbTrack"></div>
+
+      <button type="button" class="lb__nav lb__nav--prev" id="lbPrev" data-i18n-aria="lb.prev" aria-label="Previous photo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+      </button>
+      <button type="button" class="lb__nav lb__nav--next" id="lbNext" data-i18n-aria="lb.next" aria-label="Next photo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+
+      <span class="lb__counter" id="lbCounter" aria-live="polite"></span>
+    </div>
+
+    <div class="lb__info">
+      <span class="lb__cat" id="lbCat"></span>
+      <h3 class="lb__title" id="lbTitle"></h3>
+      <p class="lb__desc" id="lbDesc"></p>
+      <div class="lb__dots" id="lbDots" role="tablist"></div>
+    </div>
+  </div>
+</div>
+
+<a class="wa-float" id="waFloat" href="https://wa.me/6282163072591" target="_blank" rel="noopener" data-i18n-aria="contact.waAria" aria-label="Contact us on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1s-.5-.1-.7.2-.8 1-.9 1.2-.3.2-.6.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.6l.5-.6a2 2 0 0 0 .3-.5.5.5 0 0 0 0-.5L9.2 6.9c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.8.4A3.4 3.4 0 0 0 6 9.4a5.9 5.9 0 0 0 1.2 3.1 13.4 13.4 0 0 0 5.2 4.6c.7.3 1.3.5 1.7.6a4.1 4.1 0 0 0 1.9.1 3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.2-.3-.3-.6-.5z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+</a>
+
+<script src="/js/main.js" defer></script>
+</body>
+</html>
